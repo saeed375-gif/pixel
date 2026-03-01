@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Bubblegum+Sans&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Cairo", ui-sans-serif, system-ui, sans-serif;
+  --font-kids: "Bubblegum Sans", cursive;
+  
+  --color-sand: #f4e4bc;
+  --color-sand-dark: #dcc48e;
+  --color-sky: #87ceeb;
+  --color-nature: #4caf50;
+  --color-gold: #ffd700;
+  --color-terracotta: #e2725b;
+}
+
+body {
+  @apply bg-sand text-stone-800 overflow-x-hidden;
+  direction: rtl;
+}
+
+@utility kids-shadow {
+  box-shadow: 0 8px 0 rgba(0,0,0,0.1);
+}
+
+@utility kids-button {
+  @apply px-8 py-4 rounded-3xl font-bold text-xl transition-all active:translate-y-1 active:shadow-none kids-shadow;
+}
+
+@utility card-kids {
+  @apply bg-white rounded-[2rem] p-6 kids-shadow border-4 border-white;
+}
+
